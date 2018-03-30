@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/welcome" method="POST"/>
+<title>Signup</title>
+
+<h1>
+    Signup
+</h1>
+    <div>
+        <label>Username:</label><input type='text' name='name'/>
+        <label>Password:</label><input type='password' />
+        <label> Verify Password:</label><input type='password' />
+        <label>Email (optional)</label><input type='text' />
+    </div>
+    <input type="submit" value="Submit"/>
+</label>
+{% endblock %}
