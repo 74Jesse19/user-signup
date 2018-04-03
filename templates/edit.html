@@ -1,50 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="/welcome" method="POST"/>
-<title>Signup</title>
+
+
 
 <h1>
     Signup
 </h1>
-   <table>
-       <tbody>
+  
+<form action="/" method="post">          
+                  
+                <label>Username:</label>
+                <input type='text' name='name' value="{{username}}"/>
+              
+                <p class='error'>{{error}}</p>
+              
            
-            <tr>       
-                <td><label>Username:</label></td>
-                <td><input type='text' name='name'/></td>
-                {% if error: %}
-                <td class='error'>{{error}}</td>
-                {% endif %}
-            </tr> 
 
-            <tr>
-                <td><label>Password:</label></td>
-                <td><input type='password' name='password'/></td>
-                {% if error2: %}
-                <td class='error'>{{error2}}</td>
-                {% endif %}
-            </tr>
+        
+               
+                <label>Password:</label>
+                <input type='password' name='password' value="{{password}}"/>
+               
+                <p class='error'>{{error2}}</p>
+              <br>
+               
+            
 
-            <tr>
-                <td><label> Verify Password:</label></td>
-                <td><input type='password' name='password2'/></td>            
-                {% if error3: %}
-                <td class='error'>{{error3}}</p></td>
-                {% endif %}
+            
+                <label> Verify Password:</label>
+                <input type='password' name='password2' value="{{password2}}"/>            
+             
+                <p class='error'>{{error3}}</p>
+                 <br>
 
-            </tr>
+         
 
-            <tr>
-            <td><label>Email (optional)</label></td>
-            <td><input type='text' name='email'/></td>
-            </tr>
+            
+            <label>Email (optional)</label>
+            <input type='text' name='email'/>
+            
 
-            <tr>
-            <td><input type="submit" value="Submit"/></td>
-            </tr>
+            
+            <input type="submit" value="Submit"/>
+            
 
-        </tbody>
-    </table>
+        
+</form>
 
 {% endblock %}
