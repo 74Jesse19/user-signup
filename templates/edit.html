@@ -8,43 +8,43 @@
     Signup
 </h1>
   
-<form action="/" method="post">          
-                  
-                <label>Username:</label>
-                <input type='text' name='name' value="{{username}}"/>
-              
-                <p class='error'>{{error}}</p>
-              
-           
-
-        
-               
-                <label>Password:</label>
-                <input type='password' name='password' value="{{password}}"/>
-               
-                <p class='error'>{{error2}}</p>
-              <br>
-               
+<form action="/" method="post">   
+  
+          <table>
+            <tbody
+            <tr>
+              <td><label>Username:</label></td>
+              <td><input type='text' name='name' value="{{username}}"/></td>
+              <td class='error'>{{error}}</td>
+            </tr> 
             
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type='password' name='password' value="{{password}}"/></td>
+               
+                <td class='error'>{{error2}}</td>
+                
+            </tr> 
 
-            
-                <label> Verify Password:</label>
-                <input type='password' name='password2' value="{{password2}}"/>            
+            <tr>
+                <td><label> Verify Password:</label></td>
+                <td><input type='password' name='password2' value="{{password2}}"/></td>            
              
-                <p class='error'>{{error3}}</p>
-                 <br>
-
+                <td class='error'>{{error3}}</td>  
+            </tr> 
          
 
-            
-            <label>Email (optional)</label>
-            <input type='text' name='email'/>
-            
+            <tr>
+                <td><label>Email (optional)</label></td>
+                <td><input type='text' name='email'/></td>
+                <td class='error'>{{email_error}}</td>
+          </tr> 
 
-            
-            <input type="submit" value="Submit"/>
-            
-
+          <tr>
+            <td><input type="submit" value="Submit"/></td>
+          </tr> 
+          </tbody>  
+          </table>
         
 </form>
 
